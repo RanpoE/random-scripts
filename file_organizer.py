@@ -2,9 +2,12 @@ import os
 import shutil
 
 FILE_TYPES = {
-    'text': ['txt', 'me'],
-    'image': ['jpg', 'png', 'gif'],
-    'script': ['py', 'js']
+    'MusicFiles': ['ogg', 'mp3', 'wav'],
+    'ArchieveFiles': ['zip', '7z'],
+    'ImageFiles': ['jpg', 'png', 'gif', 'jpeg', 'svg'],
+    'VideoFiles': ['mov', 'mp4', '3gp', 'webm'],
+    'PDFFiles': ['pdf'],
+    'DataFiles': ['csv', 'json', 'md']
 }
 
 CURRENT_PATH = os.getcwd()
@@ -23,4 +26,4 @@ for file in files:
     for key, val in FILE_TYPES.items():
         if extension in val:
             dst = checkFolder(os.path.join(CURRENT_PATH, key))
-            shutil.copy(src, dst)
+            shutil.move(src, dst)
