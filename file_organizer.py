@@ -5,7 +5,7 @@ FILE_TYPES = {
     'MusicFiles': ['ogg', 'mp3', 'wav'],
     'ArchieveFiles': ['zip', '7z'],
     'ImageFiles': ['jpg', 'png', 'gif', 'jpeg', 'svg'],
-    'VideoFiles': ['mov', 'mp4', '3gp', 'webm'],
+    'VideoFiles': ['mov', 'mp4', '3gp', 'webm', '3gpp'],
     'PDFFiles': ['pdf'],
     'DataFiles': ['csv', 'json', 'md']
 }
