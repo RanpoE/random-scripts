@@ -9,10 +9,11 @@ model = YOLO('yolo-weights/yolov8n.pt')
 while True:
     success, frame = capture.read()
     result = model(frame, stream=True, show=True)
+    name_list = model.names
     for r in result:
         boxes = r.boxes
         for box in boxes:
-            label = model.names.get(box.cls.item())
+            label = name_list.get(box.cls.item())
             x1, y1, x2, y2 = box.xyxy[0]
             x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
             cv.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 255), 3)
