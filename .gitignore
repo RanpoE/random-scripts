@@ -1,2 +1,4 @@
 .venv
 notes.me
+*.pt
+*.mp4
